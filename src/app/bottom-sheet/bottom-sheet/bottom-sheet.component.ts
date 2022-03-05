@@ -26,7 +26,7 @@ export class BottomSheetComponent implements OnInit {
 
   state = 'default';
 
-  onComeIn() {
+  changeState() {
     this.state === 'default' ? this.state = 'open' : this.state = 'default';
   }
 

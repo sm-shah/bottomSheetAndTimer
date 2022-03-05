@@ -1,9 +1,9 @@
-<div class="main" (click)="onComeIn()" *ngIf="state === 'open' ">
+<div class="main" (click)="changeState()" *ngIf="state === 'open' ">
    
 </div>
 
 <div>
-    <button (click)="onComeIn()" >
+    <button (click)="changeState()" >
         Open Bottom Sheet!
     </button>
 </div>
