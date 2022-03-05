@@ -16,9 +16,11 @@ export class CountdownTimerComponent implements OnInit ,OnChanges{
   remainingTime: string = '';
 
   ngOnInit(){
-    let hour =  Math.floor(this.timeLimit / 3600);
-    let minute = Math.floor(this.timeLimit / 60);
-    let second = this.timeLimit % 60;
+    let totalSeconds = this.timeLimit;
+    let hour = Math.floor(totalSeconds / 3600);
+    totalSeconds %= 3600;
+    let minute = Math.floor(totalSeconds / 60);
+    let second = totalSeconds % 60;
     this.remainingTime = `${hour}H ${minute}M ${second}S`
 
   }
@@ -33,10 +35,12 @@ export class CountdownTimerComponent implements OnInit ,OnChanges{
   startTimer() {
     this.interval = setInterval(() => {
       if(this.timeLimit > 0) {
-        this.timeLimit--;
-        let hour =  Math.floor(this.timeLimit / 3600);
-        let minute = Math.floor(this.timeLimit / 60);
-        let second = this.timeLimit % 60;
+        debugger
+       let remainingSeconds =  this.timeLimit--;
+        let hour = Math.floor(remainingSeconds / 3600);
+        remainingSeconds %= 3600;
+        let minute = Math.floor(remainingSeconds / 60);
+        let second = remainingSeconds % 60;
 
         this.remainingTime = `${hour}H ${minute}M ${second}S`
       } else {
