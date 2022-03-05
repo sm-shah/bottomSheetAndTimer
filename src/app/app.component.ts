@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'coding-test';
   isBottomSheetDisplay = true;
-  timeLimit = 3605;
+  timeLimit = 3680;
   interval!: any;
   status: string= '';
 
