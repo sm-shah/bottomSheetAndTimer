@@ -6,7 +6,7 @@ import {animate, keyframes, state, style, transition, trigger} from '@angular/an
   templateUrl: './bottom-sheet.component.html',
   styleUrls: ['./bottom-sheet.component.css'],
   animations: [
-    trigger('tabState', [state('default', style({
+    trigger('bottomSheetState', [state('default', style({
       // left: '50%',
       // transform: 'translate(-50%)'
     })),
@@ -15,7 +15,7 @@ import {animate, keyframes, state, style, transition, trigger} from '@angular/an
         bottom: 'initial',
         top: '49%'
       })),
-      transition('default <=> open', animate(500)
+      transition('default <=> open', animate(300)
       )
     ])
   ]

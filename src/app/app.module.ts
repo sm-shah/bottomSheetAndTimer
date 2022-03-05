@@ -4,20 +4,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 import { AppComponent } from './app.component';
-import { BottomSheetComponent } from './bottom-sheet/bottom-sheet.component';
-import { CardComponent } from './card/card.component';
+import { BottomSheetModule } from './bottom-sheet/bottm-sheet.module';
+import { BottomSheetComponent } from './bottom-sheet/bottom-sheet/bottom-sheet.component';
+import { CardComponent } from './bottom-sheet/card/card.component';
 import { CountDownTimerModule } from './countdown-timer/countdown-timer.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    BottomSheetComponent,
-    CardComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    CountDownTimerModule
+    CountDownTimerModule,
+    BottomSheetModule
   ],
   providers: [],
   bootstrap: [AppComponent]
