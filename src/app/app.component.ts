@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'coding-test';
+  isBottomSheetDisplay = true;
+  timeLimit = 3605;
+  interval!: any;
+  status: string= '';
+
+  startTimer() {
+    this.status = 'start';
+  }
+
+  pauseTimer() {
+    this.status = 'pause';
+  }
 }

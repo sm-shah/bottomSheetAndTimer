@@ -10,12 +10,31 @@
     border-radius: 15px;
     overflow: scroll;
     overflow-x: auto;
+    
 }
 
 button{
     position: absolute;
+    top: 50%;
+    left: 38%;
+    background: #d93434;
+    background-image: linear-gradient(to bottom, #d93434, #2980b9);
+    border-radius: 28px;
+    text-shadow: 16px 19px 19px #c953c9;
+    box-shadow: 0px 1px 3px #666666;
+    font-family: Courier New;
+    color: #ffffff;
+    font-size: 35px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    cursor: pointer;
 }
 
+button:hover {
+    background: #73fc3c;
+    background-image: linear-gradient(to bottom, #73fc3c, #3498db);
+    text-decoration: none;
+  }
 .main{
     position: fixed;
     /* display: none; */

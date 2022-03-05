@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { BottomSheetComponent } from './bottom-sheet/bottom-sheet.component';
 import { CardComponent } from './card/card.component';
+import { CountDownTimerModule } from './countdown-timer/countdown-timer.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CardComponent } from './card/card.component';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CountDownTimerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

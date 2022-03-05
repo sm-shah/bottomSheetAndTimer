@@ -1,3 +1,9 @@
+<div class="tab-container">
+    <button class="btn" (click)="isBottomSheetDisplay = true">Bottom Sheet</button>
+    <button class="btn" (click)="isBottomSheetDisplay = false">Countdown Timer</button>
+</div>
+
+<ng-container *ngIf="isBottomSheetDisplay">
 <app-bottom-sheet>
 <ng-container ngProjectAs="[card0]">
     <app-card   [name]="'Card-0'"></app-card>
@@ -12,3 +18,12 @@
 </ng-container>
 
 </app-bottom-sheet>
+</ng-container>
+
+<ng-container *ngIf="!isBottomSheetDisplay">
+    <div class="counter">
+        <button class="btn-counter btn-green" (click)='startTimer()'>Start Timer</button>
+        <button class="btn-counter btn-red" (click)='pauseTimer()'>Pause</button>
+        <app-countdown-timer [status] = "status" [timeLimit]="timeLimit"></app-countdown-timer>
+</div>
+</ng-container>

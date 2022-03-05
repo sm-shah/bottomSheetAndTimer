@@ -2,9 +2,11 @@
    
 </div>
 
-<button (click)="onComeIn()" >
-    Open Bottom Sheet!
-</button>
+<div>
+    <button (click)="onComeIn()" >
+        Open Bottom Sheet!
+    </button>
+</div>
 <div [@tabState]="state" class="bottom-sheet">
     <h2>Please click on backdrop to close me!!.</h2>
     <ng-content select="[card0]"></ng-content>
