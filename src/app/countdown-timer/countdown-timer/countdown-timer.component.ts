@@ -17,14 +17,10 @@ export class CountdownTimerComponent implements OnInit ,OnChanges{
 
   ngOnInit(){
     let totalSeconds = this.timeLimit;
-    let hour = Math.floor(totalSeconds / 3600);
-    totalSeconds %= 3600;
-    let minute = Math.floor(totalSeconds / 60);
-    let second = totalSeconds % 60;
-    this.remainingTime = `${hour}H ${minute}M ${second}S`
-
+    this.calculateTime(totalSeconds);
   }
 
+  
   ngOnChanges(){
     if(this.status === 'start'){
       this.startTimer();
@@ -32,22 +28,26 @@ export class CountdownTimerComponent implements OnInit ,OnChanges{
       this.stopTimer();
     }
   }
+  
   startTimer() {
     this.interval = setInterval(() => {
       if(this.timeLimit > 0) {
-        debugger
-       let remainingSeconds =  this.timeLimit--;
-        let hour = Math.floor(remainingSeconds / 3600);
-        remainingSeconds %= 3600;
-        let minute = Math.floor(remainingSeconds / 60);
-        let second = remainingSeconds % 60;
-
-        this.remainingTime = `${hour}H ${minute}M ${second}S`
+        let remainingSeconds =  this.timeLimit--;
+        this.calculateTime(remainingSeconds);
       } else {
         clearInterval(this.interval);
       }
     },1000)
   }
+
+  calculateTime(totalSeconds:number){
+    let hour = Math.floor(totalSeconds / 3600);
+    totalSeconds %= 3600;
+    let minute = Math.floor(totalSeconds / 60);
+    let second = totalSeconds % 60;
+    this.remainingTime = `${hour}H ${minute}M ${second}S`;
+  }
+
 
   stopTimer() {
     clearInterval(this.interval);
