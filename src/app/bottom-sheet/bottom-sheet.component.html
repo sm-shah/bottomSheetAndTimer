@@ -1,0 +1,14 @@
+<div class="main" (click)="onComeIn()" *ngIf="state === 'open' ">
+   
+</div>
+
+<button (click)="onComeIn()" >
+    Open Bottom Sheet!
+</button>
+<div [@tabState]="state" class="bottom-sheet">
+    <h2>Please click on backdrop to close me!!.</h2>
+    <ng-content select="[card0]"></ng-content>
+    <ng-content select="[card1]"></ng-content>
+    <ng-content select="[card2]"></ng-content>
+
+</div>
