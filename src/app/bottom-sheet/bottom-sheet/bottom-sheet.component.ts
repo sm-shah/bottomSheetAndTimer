@@ -7,8 +7,6 @@ import {animate, keyframes, state, style, transition, trigger} from '@angular/an
   styleUrls: ['./bottom-sheet.component.css'],
   animations: [
     trigger('bottomSheetState', [state('default', style({
-      // left: '50%',
-      // transform: 'translate(-50%)'
     })),
       state('open', 
       style({
