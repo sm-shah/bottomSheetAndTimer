@@ -6,16 +6,14 @@ import {animate, keyframes, state, style, transition, trigger} from '@angular/an
   templateUrl: './bottom-sheet.component.html',
   styleUrls: ['./bottom-sheet.component.css'],
   animations: [
-    trigger('tabState', [state('default', style({
-      // left: '50%',
-      // transform: 'translate(-50%)'
+    trigger('bottomSheetState', [state('default', style({
     })),
       state('open', 
       style({
         bottom: 'initial',
         top: '49%'
       })),
-      transition('default <=> open', animate(500)
+      transition('default <=> open', animate(300)
       )
     ])
   ]
@@ -28,7 +26,7 @@ export class BottomSheetComponent implements OnInit {
 
   state = 'default';
 
-  onComeIn() {
+  changeState() {
     this.state === 'default' ? this.state = 'open' : this.state = 'default';
   }
 
