@@ -15,17 +15,8 @@ import {animate, keyframes, state, style, transition, trigger} from '@angular/an
         bottom: 'initial',
         top: '49%'
       })),
-      transition('default <=> open', animate(500
-        // keyframes([
-        //   style({
-        //     // top: '0',
-        //     // left: '0',
-        //     // width: '100%',
-        //     // height: '100%',
-        //     // background: 'rgba(0,0,0,0.5)'
-        //   })
-        // ])
-        ))
+      transition('default <=> open', animate(500)
+      )
     ])
   ]
 })
